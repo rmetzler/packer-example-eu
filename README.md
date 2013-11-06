@@ -33,3 +33,13 @@ In case you set up properly and want to use same region and instance and source 
 
 `$ packer build example.json`
 
+### Redis Server Instance
+
+`redis.json` actually builds upon the Redis example on packer.io and the changes I made on `example.json`.
+
+#### Differences
+
+- seperated sleep step from the actual Redis provision step (TODO: is there a description field packer would print for each provision step?)
+- I left out the Digital Ocean Step and just build a Vagrant box
+- input artifacts aren't deleted (deleting all artifacts is the default). Be aware that stored AMIs cost a little bit of money.
+

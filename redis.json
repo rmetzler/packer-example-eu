@@ -1,0 +1,26 @@
+{
+  "builders": [{
+    "type": "amazon-ebs",
+    "region": "eu-west-1",
+    "source_ami": "ami-480bea3f",
+    "instance_type": "t1.micro",
+    "ssh_username": "ubuntu",
+    "ami_name": "packer-example {{timestamp}}"
+  }],
+
+  "provisioners": [{
+    "type": "shell",
+    "inline": [ "sleep 30 # important because Amazon is building"]
+  }, {
+    "type": "shell",
+    "inline": [
+      "sudo apt-get update",
+      "sudo apt-get install -y redis-server"
+    ]
+  }],
+
+  "post-processors": [{
+    "type": "vagrant",
+    "keep_input_artifact": true
+  }]
+}
