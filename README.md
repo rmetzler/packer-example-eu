@@ -29,7 +29,7 @@ Make sure to add them to your `~/.bash_profile` and run `$ source ~/.bash_profil
 
 In case you set up properly and want to use same region and instance and source AMI
 
-`$ packer verify example.json`
+`$ packer validate example.json`
 
 `$ packer build example.json`
 
