@@ -42,4 +42,8 @@ In case you set up properly and want to use same region and instance and source 
 - seperated sleep step from the actual Redis provision step (TODO: is there a description field packer would print for each provision step?)
 - I left out the Digital Ocean Step and just build a Vagrant box
 - input artifacts aren't deleted (deleting all artifacts is the default). Be aware that stored AMIs cost a little bit of money.
+- TODO: add a vagrant template so you can `vagrant up`
+## Learnings
+
+- packer is written in Go, therefor the templating used is http://golang.org/pkg/text/template/ and it has comments!
 

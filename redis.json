@@ -20,6 +20,7 @@
   }],
 
   "post-processors": [{
+    "comment": "see http://www.packer.io/docs/post-processors/vagrant.html",
     "type": "vagrant",
     "keep_input_artifact": true
   }]
